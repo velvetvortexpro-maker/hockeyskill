@@ -23,7 +23,7 @@ export function Layout() {
       <header className="hidden sm:block fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-ice-950/80 border-b border-white/5">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3 font-display text-3xl">
-            <span className="text-4xl">🏒</span>
+            <img src="/favicon.svg" alt="" className="w-9 h-9" />
             <span className="text-white">
               Hockey<span className="text-neon-cyan">Skills</span>
             </span>
@@ -65,7 +65,7 @@ export function Layout() {
       <header className="sm:hidden sticky top-0 z-40 backdrop-blur-md bg-ice-950/80 border-b border-white/5">
         <div className="px-4 h-14 flex items-center justify-between">
           <div className="flex items-center gap-2 font-display text-2xl">
-            <span className="text-3xl">🏒</span>
+            <img src="/favicon.svg" alt="" className="w-8 h-8" />
             <span className="text-white">
               Hockey<span className="text-neon-cyan">Skills</span>
             </span>
