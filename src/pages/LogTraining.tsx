@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { saveVideo } from "../lib/videoDB";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useApp } from "../components/AppContext";
@@ -62,7 +63,10 @@ export function LogTraining() {
 
   // Video
   const [videoUrl, setVideoUrl] = useState("");
+  const [videoPreview, setVideoPreview] = useState("");
+  const [videoName, setVideoName] = useState("");
   const [showVideo, setShowVideo] = useState(false);
+  const videoInputRef = useRef<HTMLInputElement>(null);
   const [weightTransfer, setWeightTransfer] = useState(false);
   const [stickFlex, setStickFlex] = useState(false);
   const [followThrough, setFollowThrough] = useState(false);
@@ -137,6 +141,23 @@ export function LogTraining() {
     setConfetti(true);
   }
 
+  async function handleVideoFile(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const key = `video-${crypto.randomUUID()}`;
+    await saveVideo(key, file);
+    setVideoUrl(key);
+    setVideoPreview(URL.createObjectURL(file));
+    setVideoName(file.name);
+  }
+
+  function removeVideo() {
+    setVideoUrl("");
+    setVideoPreview("");
+    setVideoName("");
+    if (videoInputRef.current) videoInputRef.current.value = "";
+  }
+
   const drillsInCat = DRILLS.filter((d) => d.category === drillCat);
 
   return (
@@ -199,7 +220,7 @@ export function LogTraining() {
                 setMinutes(20);
                 setNote("");
                 setSelectedDrills([]);
-                setVideoUrl("");
+                removeVideo();
               }}
             >
               Logga en till
@@ -392,8 +413,8 @@ export function LogTraining() {
           {/* Technique */}
           <Section title="Teknik (1-5)" icon="🪄">
             <div className="grid sm:grid-cols-3 gap-4">
-              <ScaleField label="Stickhandling" value={stickhandling} onChange={setStickhandling} id="tech-stick" />
-              <ScaleField label="Dragningar" value={dekar} onChange={setDekar} id="tech-dekar" />
+              <ScaleField label="Klubbhandling" value={stickhandling} onChange={setStickhandling} id="tech-stick" />
+              <ScaleField label="Fintar" value={dekar} onChange={setDekar} id="tech-dekar" />
               <ScaleField label="Balans" value={balance} onChange={setBalance} id="tech-balance" />
             </div>
           </Section>
@@ -470,15 +491,42 @@ export function LogTraining() {
             {showVideo && (
               <div className="px-5 pb-5 space-y-4 border-t border-white/5 pt-4">
                 <div>
-                  <label className="label" htmlFor="video-url">Video-URL (YouTube/lokal länk)</label>
+                  <label className="label">Ladda upp video från enheten</label>
                   <input
-                    id="video-url"
-                    type="url"
-                    className="input"
-                    placeholder="https://..."
-                    value={videoUrl}
-                    onChange={(e) => setVideoUrl(e.target.value)}
+                    ref={videoInputRef}
+                    type="file"
+                    accept="video/*"
+                    className="hidden"
+                    onChange={handleVideoFile}
+                    aria-label="Välj videofil"
                   />
+                  {!videoPreview ? (
+                    <button
+                      type="button"
+                      onClick={() => videoInputRef.current?.click()}
+                      className="btn-ghost w-full justify-center py-4"
+                    >
+                      📂 Välj videofil
+                    </button>
+                  ) : (
+                    <div className="space-y-2">
+                      <video
+                        src={videoPreview}
+                        controls
+                        className="w-full rounded-xl max-h-56 bg-black"
+                      />
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-white/40 truncate max-w-[70%]">{videoName}</span>
+                        <button
+                          type="button"
+                          onClick={removeVideo}
+                          className="text-xs text-red-400 hover:text-red-300 transition"
+                        >
+                          Ta bort
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 {videoUrl && (
                   <div>
