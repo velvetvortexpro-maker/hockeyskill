@@ -19,8 +19,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Oswald"', "system-ui", "sans-serif"],
-        sans: ['"Inter"', "system-ui", "sans-serif"],
+        display: ['"Bebas Neue"', "system-ui", "sans-serif"],
+        sans: ['"Space Grotesk"', "system-ui", "sans-serif"],
       },
       boxShadow: {
         glow: "0 0 25px rgba(0, 245, 255, 0.35)",
