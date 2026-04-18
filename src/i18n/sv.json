@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "log": "Logga",
+    "stats": "Stats",
+    "badges": "Badges",
+    "settings": "Inställningar",
+    "drills": "Drills",
+    "programs": "Program",
+    "tests": "Tester",
+    "game": "Match",
+    "mental": "Mental"
+  },
+  "dashboard": {
+    "greeting": "Hej, {{name}}!",
+    "weeklyGoals": "Veckomål",
+    "recentActivity": "Senaste aktivitet",
+    "latestBadges": "Senaste badges",
+    "noSessions": "Inga sessioner än — logga din första.",
+    "logSession": "+ Logga session",
+    "startTraining": "Börja dagens pass"
+  },
+  "log": {
+    "title": "Logga träning",
+    "subtitle": "Fyll i bara det du tränat — tomma fält är okej.",
+    "date": "Datum",
+    "shots": "Skott",
+    "shotsAttempts": "Antal skott",
+    "shotsOnTarget": "På mål",
+    "accuracy": "Träffsäkerhet",
+    "passes": "Passningar",
+    "passesAttempts": "Antal försök",
+    "passesCompleted": "Lyckade pass",
+    "completion": "Completion",
+    "skating": "Skridsko",
+    "minutes": "Minuter",
+    "technique": "Teknik (1-5)",
+    "stickhandling": "Stickhandling",
+    "dekes": "Dragningar",
+    "balance": "Balans",
+    "note": "Anteckning",
+    "notePlaceholder": "Hur kändes passet? Vad ska du jobba på nästa gång?",
+    "save": "Spara session",
+    "cancel": "Avbryt",
+    "logged": "Session loggad!",
+    "levelUp": "LEVEL UP: {{level}}",
+    "logAnother": "Logga en till",
+    "toDashboard": "Till dashboarden"
+  },
+  "stats": {
+    "title": "Stats & Trender",
+    "subtitle": "Följ din utveckling vecka för vecka och sätt egna mål.",
+    "overall": "Overall",
+    "shot": "Skott",
+    "skating": "Skridsko",
+    "passing": "Passning",
+    "technique": "Teknik",
+    "tackling": "Tackling",
+    "goaltending": "Målvakt",
+    "weeklyStats": "Stats per vecka",
+    "weeklyVolume": "Volym per vecka",
+    "monthComparison": "Förra månaden vs. nu",
+    "goals": "Dina mål",
+    "addGoal": "+ Nytt mål"
+  },
+  "settings": {
+    "title": "Inställningar",
+    "subtitle": "Redigera din spelarprofil.",
+    "name": "Namn",
+    "position": "Position",
+    "positionNote": "Positionen påverkar hur din Overall beräknas.",
+    "photo": "Profilbild",
+    "uploadPhoto": "Ladda upp bild",
+    "removePhoto": "Ta bort bild",
+    "avatar": "Avatar (emoji)",
+    "jersey": "Tröjnummer",
+    "save": "Spara",
+    "saved": "Sparat",
+    "language": "Språk",
+    "restDay": "Markera dagens vila",
+    "restDayMarked": "Vilodag markerad",
+    "resetData": "Återställ data",
+    "resetConfirm": "Är du säker? All data raderas permanent."
+  },
+  "drills": {
+    "title": "Drill-bibliotek",
+    "levels": {
+      "beginner": "Nybörjare",
+      "intermediate": "Mellannivå",
+      "advanced": "Avancerad"
+    },
+    "categories": {
+      "skating": "Skridsko",
+      "shooting": "Skott",
+      "passing": "Passning",
+      "puck": "Puck",
+      "offIce": "Off-ice",
+      "goalie": "Målvakt"
+    }
+  },
+  "badges": {
+    "volume": "Volym",
+    "mastery": "Mastery",
+    "unlocked": "Upplåsta",
+    "locked": "Låsta"
+  },
+  "common": {
+    "loading": "Laddar…",
+    "noData": "Inga uppgifter",
+    "close": "Stäng",
+    "back": "Tillbaka",
+    "save": "Spara",
+    "cancel": "Avbryt",
+    "delete": "Ta bort",
+    "add": "Lägg till",
+    "start": "Starta",
+    "finish": "Slutför"
+  }
+}

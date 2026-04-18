@@ -1,0 +1,119 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "log": "Log",
+    "stats": "Stats",
+    "badges": "Badges",
+    "settings": "Settings",
+    "drills": "Drills",
+    "programs": "Programs",
+    "tests": "Tests",
+    "game": "Games",
+    "mental": "Mental"
+  },
+  "dashboard": {
+    "greeting": "Hey, {{name}}!",
+    "weeklyGoals": "Weekly Goals",
+    "recentActivity": "Recent Activity",
+    "latestBadges": "Latest Badges",
+    "noSessions": "No sessions yet — log your first.",
+    "logSession": "+ Log session",
+    "startTraining": "Start today's session"
+  },
+  "log": {
+    "title": "Log Training",
+    "subtitle": "Fill in only what you trained — empty fields are fine.",
+    "date": "Date",
+    "shots": "Shots",
+    "shotsAttempts": "Shot attempts",
+    "shotsOnTarget": "On target",
+    "accuracy": "Accuracy",
+    "passes": "Passes",
+    "passesAttempts": "Pass attempts",
+    "passesCompleted": "Completed passes",
+    "completion": "Completion",
+    "skating": "Skating",
+    "minutes": "Minutes",
+    "technique": "Technique (1-5)",
+    "stickhandling": "Stickhandling",
+    "dekes": "Dekes",
+    "balance": "Balance",
+    "note": "Note",
+    "notePlaceholder": "How did it feel? What will you work on next time?",
+    "save": "Save session",
+    "cancel": "Cancel",
+    "logged": "Session logged!",
+    "levelUp": "LEVEL UP: {{level}}",
+    "logAnother": "Log another",
+    "toDashboard": "Back to dashboard"
+  },
+  "stats": {
+    "title": "Stats & Trends",
+    "subtitle": "Track your progress week by week and set your own goals.",
+    "overall": "Overall",
+    "shot": "Shot",
+    "skating": "Skating",
+    "passing": "Passing",
+    "technique": "Technique",
+    "tackling": "Checking",
+    "goaltending": "Goaltending",
+    "weeklyStats": "Stats per week",
+    "weeklyVolume": "Volume per week",
+    "monthComparison": "Last month vs. now",
+    "goals": "Your goals",
+    "addGoal": "+ New goal"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Edit your player profile.",
+    "name": "Name",
+    "position": "Position",
+    "positionNote": "Position affects how your Overall is calculated.",
+    "photo": "Profile photo",
+    "uploadPhoto": "Upload photo",
+    "removePhoto": "Remove photo",
+    "avatar": "Avatar (emoji)",
+    "jersey": "Jersey number",
+    "save": "Save",
+    "saved": "Saved",
+    "language": "Language",
+    "restDay": "Mark today as rest day",
+    "restDayMarked": "Rest day marked",
+    "resetData": "Reset data",
+    "resetConfirm": "Are you sure? All data will be permanently deleted."
+  },
+  "drills": {
+    "title": "Drill Library",
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "categories": {
+      "skating": "Skating",
+      "shooting": "Shooting",
+      "passing": "Passing",
+      "puck": "Puck",
+      "offIce": "Off-ice",
+      "goalie": "Goalie"
+    }
+  },
+  "badges": {
+    "volume": "Volume",
+    "mastery": "Mastery",
+    "unlocked": "Unlocked",
+    "locked": "Locked"
+  },
+  "common": {
+    "loading": "Loading…",
+    "noData": "No data",
+    "close": "Close",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "add": "Add",
+    "start": "Start",
+    "finish": "Finish"
+  }
+}
