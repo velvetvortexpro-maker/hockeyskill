@@ -73,7 +73,18 @@ export function loadData(): AppData {
 }
 
 export function saveData(data: AppData) {
-  localStorage.setItem(KEY, JSON.stringify(data));
+  try {
+    localStorage.setItem(KEY, JSON.stringify(data));
+  } catch {
+    // QuotaExceededError — try saving without the photo
+    try {
+      const slim = { ...data, profile: { ...data.profile, photoUrl: undefined } };
+      localStorage.setItem(KEY, JSON.stringify(slim));
+      console.warn("Bilden var för stor för localStorage och sparades inte.");
+    } catch {
+      // ignore
+    }
+  }
 }
 
 export function resetData() {
